@@ -1,0 +1,7 @@
+** this is the overview.doc file for the application 'todo_list' **
+
+@author Anton Herasymenko <anton.grsm@gmail.com>
+@version 0.1.0
+@title Welcome to the `todo_list' application!
+@doc `todo_list' is a hello_world analog application
+...

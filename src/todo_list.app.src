@@ -1,0 +1,10 @@
+{application, todo_list, [
+    {description, "ToDo list service"},
+    {vsn, "0.1.0"},
+    {mod, {todo_list_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        pgapp
+    ]}
+]}.

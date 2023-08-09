@@ -1,0 +1,3 @@
+%% encoding: UTF-8
+{application,todo_list}.
+{modules,[todo_list,todo_list_app,todo_list_db,todo_list_sup]}.
