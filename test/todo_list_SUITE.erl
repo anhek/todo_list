@@ -25,13 +25,8 @@ suite() ->
 %% Reason = term()
 %%--------------------------------------------------------------------
 init_per_suite(Config) ->
-    ct:log("~nSTART1~n"),
-    {ok, List} = application:ensure_all_started(todo_list),
-    ct:log("~nSTART3 ~p~n", [List]),
-    ct:log("~nSTART4 ~p~n", [application:get_all_env(pgapp)]),
-    timer:sleep(2000),
+    {ok, _} = application:ensure_all_started(todo_list),
     {ok, _} = pgapp:equery(?DB, <<"DELETE FROM public.item">>, []),
-    ct:log("~nSTART2~n"),
     Config.
 
 %%--------------------------------------------------------------------
