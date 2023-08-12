@@ -7,11 +7,11 @@
                 {size, 4},
                 {max_overflow, 4}
             ], [
-                {host, "localhost"},
-                {port, 5432},
-                {database, "todo_list"},
-                {username, "dba"},
-                {password, "dba_pass"}
+                {host, "${DB_HOST}"},
+                {port, ${DB_PORT}},
+                {database, "${DB_NAME}"},
+                {username, "${DB_USER}"},
+                {password, "${DB_PASSWORD}"}
             ]}
         ]}
     ]},

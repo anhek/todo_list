@@ -1,0 +1,3 @@
+-sname todo_list
+-setcookie somecookie
+-kernel shell_history enabled

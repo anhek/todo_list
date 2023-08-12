@@ -61,3 +61,26 @@ Usage
     
     todo_list:get_items().
     {ok,[#{<<"id">> => 6,<<"is_done">> => false,<<"text">> => <<"text 2">>}]}
+
+Run with docker:
+-----
+
+Build:
+---
+    $ docker build -t todo_list .
+
+Run:
+---
+    $ docker compose --env-file .env up -d
+
+    $ docker compose ls
+    NAME                STATUS              CONFIG FILES
+    todo_list           running(2)          ****\todo_list\compose.yaml
+
+Attach to erlang console:
+---
+    $ docker exec -ti todo_list-erlang-1 /todo_list/bin/todo_list remote_console
+
+    Eshell V13.2.2.2  (abort with ^G)
+    (todo_list@1667a075a07e)1> todo_list:get_items().
+    {ok,[]}
